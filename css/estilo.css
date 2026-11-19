@@ -1,0 +1,144 @@
+/*cabeçalho*/
+:root {
+  --bg: #0f0c29;
+  --surface: #1b1840;
+  --rosa: #ff2e97;
+  --ciano: #00e5ff;
+  --amarelo: #ffe600;
+  --texto: #f1f1ff;
+}
+
+/*Conteudo principal*/
+body {
+  background-color: var(--bg);
+  color: var(--texto);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+  color: var(--ciano);
+  text-align: center;
+  margin: 40px 0 24px;
+}
+
+section {
+  padding: 20px 5%;
+}
+
+.navbar {
+  background-color: var(--surface);
+}
+
+.navbar-brand img {
+  height: 60px;
+  filter: invert(1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--texto);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--rosa);
+}
+
+/*banner*/
+#section-banners {
+  padding: 0;
+}
+
+.carousel-item img {
+  max-height: 450px;
+  object-fit: cover;
+}
+
+/*Produtos vendidos*/
+.card {
+  background-color: var(--surface);
+  color: var(--texto);
+  border: 2px solid var(--ciano);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 16px var(--ciano);
+}
+
+#destaques .card-text {
+  color: var(--amarelo);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--rosa);
+  border-color: var(--rosa);
+}
+
+.btn-primary:hover {
+  background-color: var(--ciano);
+  border-color: var(--ciano);
+  color: var(--bg);
+}
+
+#galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 2px solid var(--rosa);
+}
+
+/*Rodapé*/
+footer {
+  background-color: var(--surface);
+  border-top: 2px solid var(--rosa);
+  padding: 30px 5%;
+  margin-top: 40px;
+}
+
+footer a {
+  color: var(--ciano);
+  text-decoration: none;
+}
+
+/*Botão Voltar topo*/
+#voltar-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* página de login  */
+#section-login, #section-cadastro {
+  text-align: center;
+}
+
+/* Formulário de cadastro*/
+#form-login, #form-cadastro {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.form-control {
+  background-color: var(--surface);
+  color: var(--texto);
+  border: 2px solid var(--ciano);
+}
+
+.form-control:focus {
+  background-color: var(--surface);
+}
+
+/* Telas Pequenas */
+@media (max-width: 768px) {
+  .navbar-brand img {height: 45px;}
+  .carousel-item img {max-height: 220px;}
+  #galeria img {height: 140px;}
+  h2 {font-size: 1.4rem;}
+  #voltar-topo {bottom: 10px; right: 10px;}
+}
